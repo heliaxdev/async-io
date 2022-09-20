@@ -31,6 +31,7 @@ waker-fn = "1.1.0"
 
 [build-dependencies]
 autocfg = "1"
+rustversion = "1.0.9"
 
 [target."cfg(unix)".dependencies]
 libc = "0.2.77"

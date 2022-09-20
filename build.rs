@@ -9,8 +9,8 @@ fn main() {
             return;
         }
     };
-
-    if !cfg.probe_rustc_version(1, 63) {
+    let is_nightly = rustversion::cfg!(nightly);
+    if !cfg.probe_rustc_version(1, 63) || is_nightly {
         autocfg::emit("async_io_no_io_safety");
     }
 }
